@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>新規登録ページ</title>
+  <link rel="shortcut icon" href="logos/title-logo.png">
+  <meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/footer.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="left-section">
+      <a href="https://www.prime-n-salon.com/" target="_blank">
+        <img class="primen-logo" src="logos/primen-logo.webp" alt="primen-logo">
+      </a>
+    </div>
+    <div class="middle-section">
+
+    </div>
+    <div class="right-section">
+    </div>
+  </header>
+
+  <main style="padding: 70px;">
+    <div class="note">
+      こちらに入力いただいた情報をもとに進めいていきます。
+    </div>
+    <div class="name">
+      <input class="last-name" type="text" placeholder="姓">
+      <input class="first-name" type="text" placeholder="名">
+    </div>
+    <div class="login-info">
+      <input class="email" type="text" placeholder="メールアドレス">
+      <input class="password" type="text" placeholder="パスワード">
+      <input class="password-confirm" type="text" placeholder="パスワード（確認）">
+    </div>
+    <div class="education">
+      <div class="highschool">
+        <select name="class-of">
+          <option value="blank"></option>
+          <option value="2022">2022年</option>
+          <option value="2023">2023年</option>
+          <option value="2024">2024年</option>
+          <option value="2024">2025年</option>
+        </select>
+        <input class="name" type="text" placeholder="高校名">
+      </div>
+
+      <div class="university">
+        <select name="class-of">
+          <option value="blank"></option>
+          <option value="2022">2022年</option>
+          <option value="2023">2023年</option>
+          <option value="2024">2024年</option>
+          <option value="2024">2025年</option>
+        </select>
+        <select name="name">
+          <option value="blank"></option>
+          <option value="key">慶應義塾大学</option>
+          <option value="key">早稲田大学</option>
+          <option value="key">東京大学</option>
+        </select>
+        <select name="department">
+          <option value="blank"></option>
+          <option value="key">工学部</option>
+          <option value="key"">経済学部</option>
+            <option value=" key">法学部</option>
+        </select>
+        <select name="major">
+          <option value="blank"></option>
+          <option value="key">コンピューターサイエンス</option>
+          <option value="key">経済</option>
+          <option value="key">政治経済</option>
+        </select>
+  
+      </div>
+      <div class="grad-school">
+        <select name="name">
+          <option value="key"></option>
+          <option value="key">慶應義塾大学大学院</option>
+          <option value="key">早稲田大学大学院</option>
+          <option value="key">なし</option>
+        </select>
+        <select name="department">
+          <option value="blank"></option>
+          <option value="key">工学部</option>
+          <option value="key">経済学部</option>
+          <option value="key">法学部</option>
+        </select>
+        <select name="major">
+          <option value="blank"></option>
+          <option value="key">コンピューターサイエンス</option>
+          <option value="key">経済</option>
+          <option value="key">政治経済</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="industry">
+      <p>
+        first
+        <select name="desired-industry">
+          <option value="blank"></option>
+          <option value="key">総合商社</option>
+          <option value="key">デベロッパー</option>
+          <option value="key"></option>コンサル</option>
+        </select>
+      </p>
+      <p>
+        second
+        <select name="desired-industry">
+          <option value="blank"></option>
+          <option value="key">総合商社</option>
+          <option value="key">デベロッパー</option>
+          <option value="key"></option>コンサル</option>
+        </select>
+      </p>
+      <p>
+        third
+        <select name="desired-industry">
+          <option value="blank"></option>
+          <option value="key">総合商社</option>
+          <option value="key">デベロッパー</option>
+          <option value="key"></option>コンサル</option>
+        </select>
+      </p>
+      <input class="naitei-firm" type="text" placeholder="内定先 (複数/追加できるように)">
+    </div>
+    <div class="agreement">
+      <input type="checkbox" id="accept">
+      <label for="accept">利用規約に同意する</label>
+    </div>
+    <input type="submit" value="送信する">
+  </main>
+
+  <div class="wrapper">
+    <footer class="footer">
+      <p>All rights reserved by Prime. N Salon</p>
+    </footer>
+  </div>
+</body>
+
+</html>

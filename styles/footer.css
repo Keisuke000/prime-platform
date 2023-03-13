@@ -1,0 +1,17 @@
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  position: fixed;
+  background-color: white;
+  color: gray;
+  height: 20px;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  padding: 5px 20px;
+  z-index: 200;
+  border-top: 1px solid rgb(3, 3, 156, 0.30);
+
+}

@@ -1,0 +1,13 @@
+.main-contents{
+  padding: 75px 10px 20px 230px;
+}
+
+.test-ss {
+  width: 800px;
+  height: 800px;
+  border: 1px solid gray;
+}
+
+.scatterplot {
+  width: 500px;
+}
