@@ -36,6 +36,13 @@
       <input class="password" type="text" placeholder="パスワード">
       <input class="password-confirm" type="text" placeholder="パスワード（確認）">
     </div>
+    <div class="subscribed-plan">
+      <select name="user-plan">
+        <option value="blank"></option>
+        <option value="メンタープラン">メンタープラン</option>
+        <option value="ライトプラン">ライトプラン</option>
+      </select>
+    </div>
     <div class="education">
       <div class="highschool">
         <select name="class-of">
@@ -99,34 +106,27 @@
     </div>
 
     <div class="industry">
-      <p>
-        first
-        <select name="desired-industry">
-          <option value="blank"></option>
-          <option value="key">総合商社</option>
-          <option value="key">デベロッパー</option>
-          <option value="key"></option>コンサル</option>
-        </select>
-      </p>
-      <p>
-        second
-        <select name="desired-industry">
-          <option value="blank"></option>
-          <option value="key">総合商社</option>
-          <option value="key">デベロッパー</option>
-          <option value="key"></option>コンサル</option>
-        </select>
-      </p>
-      <p>
-        third
-        <select name="desired-industry">
-          <option value="blank"></option>
-          <option value="key">総合商社</option>
-          <option value="key">デベロッパー</option>
-          <option value="key"></option>コンサル</option>
-        </select>
-      </p>
-      <input class="naitei-firm" type="text" placeholder="内定先 (複数/追加できるように)">
+      <select name="desired-industry">
+        <option value="blank"></option>
+        <option value="key">総合商社</option>
+        <option value="key">デベロッパー</option>
+        <option value="key"></option>コンサル</option>
+      </select>
+      <select name="desired-industry">
+        <option value="blank"></option>
+        <option value="key">総合商社</option>
+        <option value="key">デベロッパー</option>
+        <option value="key"></option>コンサル</option>
+      </select>
+      <select name="desired-industry">
+        <option value="blank"></option>
+        <option value="key">総合商社</option>
+        <option value="key">デベロッパー</option>
+        <option value="key"></option>コンサル</option>
+      </select>
+      <div>
+        <input class="naitei-firm" type="text" placeholder="内定先 (複数/追加できるように)">
+      </div>
     </div>
     <div class="agreement">
       <input type="checkbox" id="accept">

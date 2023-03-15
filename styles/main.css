@@ -11,3 +11,47 @@
 .scatterplot {
   width: 500px;
 }
+
+.todo-manager {
+  font-size: 20px;
+}
+
+.todo-input {
+  border-bottom: 1px solid  rgb(3, 3, 156);
+  padding-bottom: 30px;
+}
+
+.input-task-button {
+  display: flex;
+  width: 300px;
+  height: 38px;
+}
+
+.input-task-button::placeholder{
+  font-size: 20px;
+}
+
+.input-date-button {
+  display: flex;
+  width: 300px;
+  height: 38px;
+}
+
+
+.input-date-button::-webkit-datetime-edit{
+  font-size: 20px;
+}
+
+.input-date-button::-webkit-calendar-picker-indicator{
+  width: 20px;
+}
+
+
+.add-task-button {
+  display: flex;
+  font-size: 20px;
+}
+
+
+
+
