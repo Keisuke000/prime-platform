@@ -6,12 +6,15 @@
   position: fixed;
   background-color: white;
   height: 70px;
+  width: 100%;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 200;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
   border-bottom: 1px solid rgb(3, 3, 156, 0.30);
 }
+
+
 
 /* -----------------------LEFT section----------------------- */
 .left-section {
@@ -66,7 +69,7 @@
   border:  2px solid rgb(3, 3, 156, 0.8);
 }
 
-.search-button {
+.search-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,12 +97,12 @@
   background-color:  rgb(189, 189, 189);
 }
 
-.search-button:active, 
+.search-btn:active, 
 .search-icon:active {
   background-color:  rgb(221, 220, 220);
 }
 
-.search-button .tooltip {
+.search-btn .tooltip {
   position: absolute;
   background-color: rgb(189, 189, 189);
   padding: 4px 8px;
@@ -112,7 +115,7 @@
   white-space: nowrap;
 }
 
-.search-button:hover .tooltip {
+.search-btn:hover .tooltip {
   opacity: 1;
 }
 
@@ -121,16 +124,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 20px;
   flex-shrink: 0;
   padding-left: 10px;
 }
 
-.slack-button,
-.instagram-button ,
-.twitter-button ,
-.youtube-button ,
-.tiktok-button {
+.sns-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.slack-btn,
+.instagram-btn ,
+.twitter-btn,
+.youtube-btn,
+.tiktok-btn{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,11 +157,11 @@
   padding: 5px;
 }
 
-.slack-button .tooltip,
-.instagram-button .tooltip,
-.twitter-button .tooltip,
-.youtube-button .tooltip,
-.tiktok-button .tooltip {
+.slack-btn .tooltip,
+.instagram-btn .tooltip,
+.twitter-btn .tooltip,
+.youtube-btn .tooltip,
+.tiktok-btn .tooltip {
   position: absolute;
   background-color: rgb(189, 189, 189);
   padding: 4px 8px;
@@ -165,33 +174,64 @@
   white-space: nowrap;
 }
 
-.slack-button:hover .tooltip,
-.instagram-button:hover .tooltip,
-.twitter-button:hover .tooltip,
-.youtube-button:hover .tooltip,
-.tiktok-button:hover .tooltip {
+.slack-btn:hover .tooltip,
+.instagram-btn:hover .tooltip,
+.twitter-btn:hover .tooltip,
+.youtube-btn:hover .tooltip,
+.tiktok-btn:hover .tooltip {
   opacity: 1;
 }
 
-.registration-button {
-  background-color: white;
-  color: rgb(3, 3, 156);
-  border: 1px solid rgb(3, 3, 156);
-  border-radius: 3px;
-  padding: 12px 15px;
-  margin-left: 20px;
+.toggle-section {
+  display: block;
+  position: relative;
+  top: 0px;
+  right: -80px;
+  width: 30px;
+  height: 30px;
+  padding: 0px 20px 0px 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .toggle-section {
+    right: 0px;
+  }
+
+}
+
+.toggle-btn {
+  display: block;
+  position: absolute;
+  justify-content: center;
+  top: 0px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  transition: 0.15s;
 }
 
-.registration-button:hover {
-  background-color: rgb(3, 3, 156);
-  color: white;
+.toggle-btn span {
+  position: absolute;
+  justify-content: center;
+  display: block;
+  left: 0px;
+  width: 30px;
+  height: 3px;
+  background-color: rgb(3, 3, 156, 0.7);
+  transition: all 0.5s;
+  border-radius: 4px;
 }
 
-.registration-button:active {
-  opacity: 0.5;
+.toggle-btn span:nth-child(1) {
+  top: 4px;
 }
+.toggle-btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle-btn span:nth-child(3) {
+  bottom: 4px;
+}
+
 
 
 

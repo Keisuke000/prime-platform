@@ -1,16 +1,33 @@
+.nav {
+  display: flex;
+}
+
 .sidebar{
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   position: fixed;
   background-color: white;
-  color: rgb(87, 87, 87);
+  left: 0px;
   top: 0px;
   bottom: 0px;
-  left: 0px;
   padding: 80px 20px 40px 20px;
   width: 180px;
   font-size: 15px;
+  transition: all 0.5s;
+  z-index: 50;
+} 
+
+
+@media screen and (max-width: 800px) {
+  .sidebar {
+    left: -220px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .open .sidebar {
+    left: 0;
+  }
 }
 
 .sidebar-link {
@@ -22,6 +39,7 @@
   border-left: 5px solid rgb(3, 3, 156, 0.30);
   margin: 10px 0px;
   cursor: pointer;
+
 }
 
 .sidebar-link:hover {
@@ -32,6 +50,7 @@
 .sidebar-link:active {
   opacity: 0.4;
 }
+
 
 /* -----------------------UPPER section----------------------- */
 .announce-count {
@@ -63,6 +82,16 @@
   padding: 0px 10px;
 }
 
+.announce-description,
+.step-description,
+.results-description,
+.karte-description,
+.memberships-description,
+.accounting-description,
+.todo-description {
+  color: rgb(87, 87, 87)
+}
+
 /* -----------------------LOWER section----------------------- */
 .logout-icon,
 .setting-icon {
@@ -70,3 +99,25 @@
   height: 30px;
   padding: 0px 10px;
 }
+
+.registration-btn {
+  background-color: white;
+  color: rgb(3, 3, 156);
+  border: 1px solid rgb(3, 3, 156);
+  border-radius: 3px;
+  padding: 12px 15px;
+  margin-left: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.registration-btn:hover {
+  background-color: rgb(3, 3, 156);
+  color: white;
+}
+
+.registration-btn:active {
+  opacity: 0.5;
+}
+
