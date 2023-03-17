@@ -17,14 +17,12 @@
 </head>
 
 <body>
-
   <header class="header">
     <div class="left-section">
       <a href="https://www.prime-n-salon.com/" target="_blank">
         <img class="primen-logo" src="logos/primen-logo.webp" alt="primen-logo">
       </a>
     </div>
-
     <div class="middle-section">
       <input class="search-input" type="text" placeholder="キーワードを入力">
       <button class="search-btn">
@@ -32,49 +30,17 @@
         <div class="tooltip">検索する</div>
       </button>
     </div>
-
     <div class="right-section">
-      <div class="sns-link">
-        <div class="slack-btn">
-          <a href="" target="_blank">
-            <img class="slack-icon" src="icons/slack.png">
-          </a>
-          <div class="tooltip">Slackに参加</div>
-        </div>
-        <div class="instagram-btn">
-          <a href="https://www.instagram.com/prime.n_salon/" target="_blank">
-            <img class="instagram-icon" src="icons/instagram.png">
-          </a>
-          <div class="tooltip">Instagram</div>
-        </div>
-        <div class="twitter-btn">
-          <a href="https://twitter.com/nsyuukatu" target="_blank">
-            <img class="twitter-icon" src="icons/twitter.png">
-          </a>
-          <div class="tooltip">Twitter</div>
-        </div>
-        <div class="youtube-btn">
-          <a href="https://www.youtube.com/@prime.nsalon6667" target="_blank">
-            <img class="youtube-icon" src="icons/youtube.png">
-          </a>
-          <div class="tooltip">Youtube</div>
-        </div>
-        <div class="tiktok-btn">
-          <a href="https://www.tiktok.com/@prime.nsalon" target="_blank">
-            <img class="tiktok-icon" src="icons/tik-tok.png">
-          </a>
-          <div class="tooltip">Tiktok</div>
-        </div>
+      <div class="toggle-section">
+        <div class="toggle-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-    <div class="toggle-section">
-      <div class="toggle-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
   </header>
-
+  
   <nav>
     <div class="sidebar">
       <div class="upper-section">
@@ -112,10 +78,46 @@
         <button class="registration-btn">
           新規登録はこちら
         </button>
+        <div class="sns-btns">
+          <div class="slack-btn">
+            <a href="" target="_blank">
+              <img class="slack-icon" src="icons/slack.png">
+            </a>
+            <div class="tooltip">Slackに参加</div>
+          </div>
+          <div class="instagram-btn">
+            <a href="https://www.instagram.com/prime.n_salon/" target="_blank">
+              <img class="instagram-icon" src="icons/instagram.png">
+            </a>
+            <div class="tooltip">Instagram</div>
+          </div>
+          <div class="twitter-btn">
+            <a href="https://twitter.com/nsyuukatu" target="_blank">
+              <img class="twitter-icon" src="icons/twitter.png">
+            </a>
+            <div class="tooltip">Twitter</div>
+          </div>
+          <div class="youtube-btn">
+            <a href="https://www.youtube.com/@prime.nsalon6667" target="_blank">
+              <img class="youtube-icon" src="icons/youtube.png">
+            </a>
+            <div class="tooltip">Youtube</div>
+          </div>
+          <div class="tiktok-btn">
+            <a href="https://www.tiktok.com/@prime.nsalon" target="_blank">
+              <img class="tiktok-icon" src="icons/tik-tok.png">
+            </a>
+            <div class="tooltip">Tiktok</div>
+          </div>
+        </div>
       </div>
     </div>
     <div id="mask"></div>
   </nav>
+
+  <footer class="footer">
+    <p>All rights reserved by Prime. N Salon</p>
+  </footer>
 
   <main>
     <div class="contents">
@@ -123,12 +125,6 @@
       src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSUHott7ZM0hDsUV8roEgDPOQ4Zw00iFAfTdvSga77gLUWcs03m5Co4laqtVhqnbrpr_F0LK6jxfulI/pubhtml?widget=true&amp;headers=true"></iframe>
     </div>
   </main>
-
-  <div class="wrapper">
-    <footer class="footer">
-      <p>All rights reserved by Prime. N Salon</p>
-    </footer>
-  </div>
 
   <script src="js/hamburger-menu.js"></script>
 </body>

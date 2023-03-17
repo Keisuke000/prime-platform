@@ -1,6 +1,7 @@
 .contents {
   padding: 75px 30px 30px 230px;
   transition: all 0.5s;
+  overflow: scroll;
 }
 
 @media screen and (max-width: 800px) {
@@ -19,7 +20,6 @@
   #mask {
     display: none;
     transition: all 0.5s;
-    
   }
 
   .open #mask {

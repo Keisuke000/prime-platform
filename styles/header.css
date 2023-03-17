@@ -18,7 +18,6 @@
 
 /* -----------------------LEFT section----------------------- */
 .left-section {
-  display: flex;
   align-items: center;
   width: 220px;
   padding-right: 0px;
@@ -121,101 +120,33 @@
 
 /* -----------------------RIGHT section----------------------- */
 .right-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 20px;
-  flex-shrink: 0;
-  padding-left: 10px;
-}
 
-.sns-link {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.slack-btn,
-.instagram-btn ,
-.twitter-btn,
-.youtube-btn,
-.tiktok-btn{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  transition: 0.15s;
-}
-
-.slack-icon,
-.instagram-icon,
-.twitter-icon,
-.youtube-icon,
-.tiktok-icon {
-  width: 30px;
-  height: 30px;
-  padding: 5px;
-}
-
-.slack-btn .tooltip,
-.instagram-btn .tooltip,
-.twitter-btn .tooltip,
-.youtube-btn .tooltip,
-.tiktok-btn .tooltip {
-  position: absolute;
-  background-color: rgb(189, 189, 189);
-  padding: 4px 8px;
-  bottom: -35px;
-  border-radius: 2px;
-  font-size: 12px;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.15s;
-  white-space: nowrap;
-}
-
-.slack-btn:hover .tooltip,
-.instagram-btn:hover .tooltip,
-.twitter-btn:hover .tooltip,
-.youtube-btn:hover .tooltip,
-.tiktok-btn:hover .tooltip {
-  opacity: 1;
 }
 
 .toggle-section {
-  display: block;
-  position: relative;
+  display: inline-block;
   top: 0px;
-  right: -80px;
-  width: 30px;
-  height: 30px;
-  padding: 0px 20px 0px 40px;
-}
-
-@media screen and (max-width: 800px) {
-  .toggle-section {
-    right: 0px;
-  }
-
+  right: 0px;
+  height: 70px;
+  width: 36px;
+  padding: 0px 30px 0px 30px;
 }
 
 .toggle-btn {
   display: block;
-  position: absolute;
-  justify-content: center;
-  top: 0px;
-  right: 20px;
-  width: 30px;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  top: 20px;
+  bottom: 20px;
+  right: -100px;
+  width: 36px;
   height: 30px;
   cursor: pointer;
 }
 
 .toggle-btn span {
-  position: absolute;
-  justify-content: center;
   display: block;
-  left: 0px;
-  width: 30px;
   height: 3px;
   background-color: rgb(3, 3, 156, 0.7);
   transition: all 0.5s;
@@ -223,13 +154,27 @@
 }
 
 .toggle-btn span:nth-child(1) {
-  top: 4px;
+  top: 0px;
 }
 .toggle-btn span:nth-child(2) {
-  top: 14px;
+  margin: 10px 0px;
 }
 .toggle-btn span:nth-child(3) {
-  bottom: 4px;
+  bottom: 0px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .toggle-btn {
+    right: 0px;
+  }
+
+  .toggle-btn span {
+    right: 0px;
+  }
+
+
+
 }
 
 
