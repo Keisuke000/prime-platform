@@ -11,12 +11,12 @@
   left: 0px;
   top: 0px;
   bottom: 0px;
-  padding: 80px 20px 40px 20px;
+  padding: 70px 20px 20px 20px;
   width: 180px;
+  height: auto;
   font-size: 15px;
   transition: all 0.5s;
   z-index: 50;
-
 } 
 
 
@@ -26,7 +26,6 @@
   }
   .open .sidebar {
     left: 0;
-    font-size: 13px;
     overflow: scroll;
   }
 }
@@ -38,7 +37,7 @@
   padding: 0px 0px 0px 3px;
   align-items: center;
   border-left: 5px solid rgb(3, 3, 156, 0.30);
-  margin: 10px 0px;
+  margin: 7px 0px;
   cursor: pointer;
 
 }
@@ -118,7 +117,7 @@
   border: 1px solid rgb(3, 3, 156);
   border-radius: 3px;
   padding: 10px 0px;
-  margin-top: 20px;
+  margin-top: 10px;
   cursor: pointer;
   transition: 0.15s;
 }
@@ -137,7 +136,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 10px 0px;
-  margin: 5px 0px 5px 0px;
+  margin: 10px 0px;
 }
 
 .slack-btn,
@@ -145,7 +144,6 @@
 .twitter-btn,
 .youtube-btn,
 .tiktok-btn {
-
   transition: 0.15s;
 }
 

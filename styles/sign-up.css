@@ -1,0 +1,186 @@
+.su-form {
+  background-color: white;
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+  width: 700px;
+  margin: 0px auto;
+  padding: 0px 20px; 
+  border-radius: 5px;
+}
+
+/* Title (upper)----------------------- */
+.su-title {
+  font-size: 30px;
+  margin: 10px;
+  padding: 20px 0px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 800px) {
+  .su-form {
+    width: 100%;
+  }
+}
+
+/* Contents (middle)----------------------- */
+.su-contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.identity,
+.name,
+.name-kana,
+.others {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgb(3, 3, 156);
+  padding: 5px;
+}
+
+.category-column {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.input-column {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#fName,
+#lName,
+#fNameKana,
+#lNameKana {
+  width: 50%;
+  height: 24px;
+  padding: 3px 10px;
+  margin: 5px;
+  border: 1.5px solid rgb(237, 237, 237);
+  border-radius: 5px;
+  cursor: pointer;
+} 
+
+#mailAddress,
+#birthDate {
+  width: 100%;
+  height: 24px;
+  padding: 3px 10px;
+  margin: 5px;
+  border: 1.5px solid rgb(237, 237, 237);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#mailAddress::placeholder,
+#fName::placeholder,
+#lName::placeholder,
+#fNameKana::placeholder,
+#lNameKana::placeholder {
+  font-size: 15px;
+}
+
+/* Submit (lower)----------------------- */
+.su-submit {
+  height:74px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+.agreement {
+  width: 50%;
+}
+
+.agreement-check {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.toggle-button-001 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 50px;
+  height: 25px;
+  border-radius: 25px;
+  box-sizing: content-box;
+  background-color: #ff8d8d33;
+  cursor: pointer;
+  transition: background-color .4s;
+  margin: 6px 10px;
+}
+
+.toggle-button-001:has(:checked) {
+  background-color: #75bbff33;
+}
+
+.toggle-button-001::before {
+  position: absolute;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: gray;
+  content: '';
+  transition: left .4s;
+}
+
+.toggle-button-001:has(:checked)::before {
+  left: 25px;
+  background-color: rgb(3, 3, 156);
+}
+
+.toggle-button-001::after {
+  position: absolute;
+  left: 25px;
+  transform: translateX(-50%);
+  color: #fff;
+  font-weight: 600;
+  font-size: .5em;
+  content: '';
+  transition: left .4s;
+}
+
+.toggle-button-001:has(:checked)::after {
+  left: 25px;
+  content: '';
+}
+
+.toggle-button-001 input {
+  display: none;
+}
+
+.su-btn {
+  background-color: white;
+  color: rgb(3, 3, 156);
+  border: 1px solid rgb(3, 3, 156);
+  border-radius: 3px;
+  padding: 5px 30px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.su-btn:hover {
+  background-color: rgb(3, 3, 156);
+  color: white;
+}
+
+.su-btn:active {
+  opacity: 0.5;
+}
+
+/* Login (last)----------------------- */
+.login {
+  color: gray;
+  text-align: right;
+  padding: 30px 10px;
+}
+
+

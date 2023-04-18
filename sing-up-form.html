@@ -4,9 +4,16 @@
 <head>
   <title>新規登録ページ</title>
   <link rel="shortcut icon" href="logos/title-logo.png">
-  <meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
+  <meta data-n-head="ssr" name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/general.css">
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/sign-up.css">
 </head>
 
 <body>
@@ -16,130 +23,79 @@
         <img class="primen-logo" src="logos/primen-logo.webp" alt="primen-logo">
       </a>
     </div>
-    <div class="middle-section">
-
-    </div>
-    <div class="right-section">
-    </div>
+    <div class="middle-section"></div>
+    <div class="right-section"></div>
   </header>
 
-  <main style="padding: 70px;">
-    <div class="note">
-      こちらに入力いただいた情報をもとに進めいていきます。
-    </div>
-    <div class="name">
-      <input class="last-name" type="text" placeholder="姓">
-      <input class="first-name" type="text" placeholder="名">
-    </div>
-    <div class="login-info">
-      <input class="email" type="text" placeholder="メールアドレス">
-      <input class="password" type="text" placeholder="パスワード">
-      <input class="password-confirm" type="text" placeholder="パスワード（確認）">
-    </div>
-    <div class="subscribed-plan">
-      <select name="user-plan">
-        <option value="blank"></option>
-        <option value="メンタープラン">メンタープラン</option>
-        <option value="ライトプラン">ライトプラン</option>
-      </select>
-    </div>
-    <div class="education">
-      <div class="highschool">
-        <select name="class-of">
-          <option value="blank"></option>
-          <option value="2022">2022年</option>
-          <option value="2023">2023年</option>
-          <option value="2024">2024年</option>
-          <option value="2024">2025年</option>
-        </select>
-        <input class="name" type="text" placeholder="高校名">
+  <!-- su refers sign-up -->
+  <main style="padding: 70px 0px;">
+    <div class="su-form">
+      <div class="su-title">新規登録</div>
+      <div class="su-contents">
+        <form>
+          <div class="form">
+            <div class="identity">
+              <div class="category-column">メールアドレス</div>
+              <div class="input-column">
+                <input type="text"  placeholder="@以降も記入して下さい。" id="mailAddress">
+              </div>
+            </div>
+            <div class="name">
+              <div class="category-column">氏名（漢字）</div>
+              <div class="input-column">
+                <input type="text"  placeholder="姓" id="fName">
+                <input type="text" placeholder="名" id="lName">
+              </div>
+            </div>
+            <div class="name-kana">
+              <div class="category-column">ふりがな（氏名）</div>
+              <div class="input-column">
+                <input type="text" placeholder="せい" id="fNameKana">
+                <input type="text" placeholder="めい" id="lNameKana">
+              </div>
+            </div>
+            <div class="others">
+              <div class="category-column">生年月日</div>
+              <div class="input-column">
+                <input type="date" value="yyyy-mm-dd" id="birthDate">
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
 
-      <div class="university">
-        <select name="class-of">
-          <option value="blank"></option>
-          <option value="2022">2022年</option>
-          <option value="2023">2023年</option>
-          <option value="2024">2024年</option>
-          <option value="2024">2025年</option>
-        </select>
-        <select name="name">
-          <option value="blank"></option>
-          <option value="key">慶應義塾大学</option>
-          <option value="key">早稲田大学</option>
-          <option value="key">東京大学</option>
-        </select>
-        <select name="department">
-          <option value="blank"></option>
-          <option value="key">工学部</option>
-          <option value="key"">経済学部</option>
-            <option value=" key">法学部</option>
-        </select>
-        <select name="major">
-          <option value="blank"></option>
-          <option value="key">コンピューターサイエンス</option>
-          <option value="key">経済</option>
-          <option value="key">政治経済</option>
-        </select>
-  
+      <div class="su-submit">
+        <div class="agreement">
+          <div class="agreement-check">
+            <label class="toggle-button-001">
+              <input type="checkbox"/>
+            </label>
+            <a href="">会員規約</a>に同意する
+          </div>
+          <div class="agreement-check">
+            <label class="toggle-button-001">
+              <input type="checkbox"/>
+            </label>
+            <a href="">プライバシーポリシー</a>に同意する
+          </div>
+        </div>
+        <!-- set button onClick method to call function we defined passing input values as parameters -->
+        <button type="button" class="su-btn" onclick="callAPI(document.getElementById('mailAddress').value, document.getElementById('fName').value, document.getElementById('fNameKana').value, document.getElementById('lName').value, document.getElementById('lNameKana').value, document.getElementById('birthDate').value)">送信する</button>
       </div>
-      <div class="grad-school">
-        <select name="name">
-          <option value="key"></option>
-          <option value="key">慶應義塾大学大学院</option>
-          <option value="key">早稲田大学大学院</option>
-          <option value="key">なし</option>
-        </select>
-        <select name="department">
-          <option value="blank"></option>
-          <option value="key">工学部</option>
-          <option value="key">経済学部</option>
-          <option value="key">法学部</option>
-        </select>
-        <select name="major">
-          <option value="blank"></option>
-          <option value="key">コンピューターサイエンス</option>
-          <option value="key">経済</option>
-          <option value="key">政治経済</option>
-        </select>
+      <div class="login">
+        <a href="https://www.google.co.jp/" target="_blank">
+          すでにアカウントを持っている場合はこちら &gt;
+        </a>
       </div>
     </div>
 
-    <div class="industry">
-      <select name="desired-industry">
-        <option value="blank"></option>
-        <option value="key">総合商社</option>
-        <option value="key">デベロッパー</option>
-        <option value="key"></option>コンサル</option>
-      </select>
-      <select name="desired-industry">
-        <option value="blank"></option>
-        <option value="key">総合商社</option>
-        <option value="key">デベロッパー</option>
-        <option value="key"></option>コンサル</option>
-      </select>
-      <select name="desired-industry">
-        <option value="blank"></option>
-        <option value="key">総合商社</option>
-        <option value="key">デベロッパー</option>
-        <option value="key"></option>コンサル</option>
-      </select>
-      <div>
-        <input class="naitei-firm" type="text" placeholder="内定先 (複数/追加できるように)">
-      </div>
-    </div>
-    <div class="agreement">
-      <input type="checkbox" id="accept">
-      <label for="accept">利用規約に同意する</label>
-    </div>
-    <input type="submit" value="送信する">
   </main>
-
-  <div class="wrapper">
+  <div class=" wrapper">
     <footer class="footer">
       <p>All rights reserved by Prime. N Salon</p>
     </footer>
   </div>
+  <script src="js/callAPI.js"></script>
 </body>
 
 </html>

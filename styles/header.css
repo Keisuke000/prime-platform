@@ -5,7 +5,7 @@
   align-items: center;
   position: fixed;
   background-color: white;
-  height: 70px;
+  height: 60px;
   width: 100%;
   top: 0;
   left: 0px;
@@ -13,7 +13,6 @@
   z-index: 100;
   border-bottom: 1px solid rgb(3, 3, 156, 0.30);
 }
-
 
 
 /* -----------------------LEFT section----------------------- */
@@ -42,6 +41,13 @@
   margin-right: 35px;
   max-width: 500px;
 }
+
+@media screen and (max-width: 800px) {
+  .middle-section {
+    display: none;
+  }
+}
+
 
 .search-input {
   box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.15);
@@ -118,31 +124,32 @@
   opacity: 1;
 }
 
+
+
 /* -----------------------RIGHT section----------------------- */
 .right-section {
-
-}
-
-.toggle-section {
   display: inline-block;
+  justify-content: center;
   top: 0px;
   right: 0px;
-  height: 70px;
-  width: 36px;
+  height: 60px;
   padding: 0px 30px 0px 30px;
 }
+
 
 .toggle-btn {
   display: block;
   position: relative;
-  justify-content: space-between;
-  align-items: center;
   top: 20px;
-  bottom: 20px;
   right: -100px;
-  width: 36px;
-  height: 30px;
+  width: 30px;
+  height: 25px;
   cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background-color: rgb(242, 240, 240);
+  transition: all 0.15s;
 }
 
 .toggle-btn span {
@@ -154,15 +161,14 @@
 }
 
 .toggle-btn span:nth-child(1) {
-  top: 0px;
+  top: 10px;
 }
 .toggle-btn span:nth-child(2) {
-  margin: 10px 0px;
+  margin: 8px 0px;
 }
 .toggle-btn span:nth-child(3) {
-  bottom: 0px;
+  bottom: 10px;
 }
-
 
 @media screen and (max-width: 800px) {
   .toggle-btn {
@@ -172,9 +178,6 @@
   .toggle-btn span {
     right: 0px;
   }
-
-
-
 }
 
 
