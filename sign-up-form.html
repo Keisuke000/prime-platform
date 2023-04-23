@@ -34,30 +34,81 @@
       <div class="su-contents">
         <form>
           <div class="form">
-            <div class="identity">
-              <div class="category-column">メールアドレス</div>
-              <div class="input-column">
-                <input type="text"  placeholder="@以降も記入して下さい。" id="mailAddress">
+            <div class="wrapper-form">
+              <div class="mail-address">
+                <div class="category-column">＊メールアドレス</div>
+                <div class="input-column">
+                  <input type="text"  placeholder="@以降も記入して下さい。" id="mailAddress">
+                </div>
+              </div>
+              <div class="name">
+                <div class="category-column">＊氏名（漢字）</div>
+                <div class="input-column">
+                  <input type="text"  placeholder="姓" id="fName">
+                  <input type="text" placeholder="名" id="lName">
+                </div>
+              </div>
+              <div class="name-kana">
+                <div class="category-column">＊ふりがな（氏名）</div>
+                <div class="input-column">
+                  <input type="text" placeholder="せい" id="fNameKana">
+                  <input type="text" placeholder="めい" id="lNameKana">
+                </div>
+              </div>
+              <div class="birth-date">
+                <div class="category-column">＊生年月日</div>
+                <div class="input-column">
+                  <input type="date" value="yyyy-mm-dd" id="birthDate">
+                </div>
               </div>
             </div>
-            <div class="name">
-              <div class="category-column">氏名（漢字）</div>
-              <div class="input-column">
-                <input type="text"  placeholder="姓" id="fName">
-                <input type="text" placeholder="名" id="lName">
+            
+            <div class="wrapper-form">
+              <div class="uni-name">
+                <div class="category-column">大学名</div>
+                <div class="input-column">
+                  <select  id="uniName" required>
+                    <option value="">▼ 選択してください</option>
+                    <option>選択肢のサンプル1</option>
+                    <option>選択肢のサンプル2</option>
+                    <option>選択肢のサンプル3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="uni-class-of">
+                <div class="category-column">卒業年(大学)</div>
+                <div class="input-column">
+                  <select  id="uniClassOf" required>
+                    <option value="">▼ 選択してください</option>
+                    <option>1997</option>
+                    <option>1996</option>
+                    <option>1995</option>
+                  </select>
+                </div>
               </div>
             </div>
-            <div class="name-kana">
-              <div class="category-column">ふりがな（氏名）</div>
-              <div class="input-column">
-                <input type="text" placeholder="せい" id="fNameKana">
-                <input type="text" placeholder="めい" id="lNameKana">
+            <div class="wrapper-form">
+              <div class="gschool-name">
+                <div class="category-column">大学院名</div>
+                <div class="input-column">
+                  <select  id="gschoolClassOf" required>
+                    <option value="">▼ 選択してください</option>
+                    <option>なし</option>
+                    <option>選択肢のサンプル2</option>
+                    <option>選択肢のサンプル3</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="others">
-              <div class="category-column">生年月日</div>
-              <div class="input-column">
-                <input type="date" value="yyyy-mm-dd" id="birthDate">
+              <div class="gschool-class-of">
+                <div class="category-column">卒業年(大学院)</div>
+                <div class="input-column">
+                  <select  id="gschoolClassOf" required>
+                    <option value="">▼ 選択してください</option>
+                    <option>1997</option>
+                    <option>1996</option>
+                    <option>1995</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
