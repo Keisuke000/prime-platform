@@ -10,62 +10,67 @@
 /* Title (upper)----------------------- */
 .su-title {
   font-size: 30px;
-  margin: 10px;
+  margin: 10px 10px 0px 10px;
   padding: 20px 0px;
   font-weight: 700;
+  border-bottom: 1px solid rgb(3, 3, 156);
 }
 
 @media screen and (max-width: 800px) {
   .su-form {
-    width: 100%;
+    width: 500px;
   }
-}
+} 
 
 /* Contents (middle)----------------------- */
 .su-contents {
   display: flex;
   flex-direction: column;
-}
-
-.identity,
-.name,
-.name-kana,
-.others {
-  display: flex;
-  flex-direction: row;
-  border-bottom: 1px solid rgb(3, 3, 156);
-  padding: 5px;
+  justify-content: space-between;
 }
 
 .category-column {
-  width: 30%;
+  width: 50%;
   display: flex;
   align-items: center;
   padding-left: 10px;
 }
 
 .input-column {
-  width: 70%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.wrapper-form {
+  border-bottom: 1px solid rgb(3, 3, 156);
+}
+
+.mail-address,
+.name,
+.name-kana,
+.birth-date,
+.uni-name,
+.uni-class-of,
+.gschool-name,
+.gschool-class-of {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
 }
 
 #fName,
 #lName,
 #fNameKana,
-#lNameKana {
-  width: 50%;
-  height: 24px;
-  padding: 3px 10px;
-  margin: 5px;
-  border: 1.5px solid rgb(237, 237, 237);
-  border-radius: 5px;
-  cursor: pointer;
-} 
-
+#lNameKana,
 #mailAddress,
-#birthDate {
+#birthDate,
+#uniName,
+#uniClassOf,
+#gschoolClassOf {
   width: 100%;
   height: 24px;
   padding: 3px 10px;
@@ -73,6 +78,14 @@
   border: 1.5px solid rgb(237, 237, 237);
   border-radius: 5px;
   cursor: pointer;
+  font-size: 15px;
+  color: gray;
+} 
+
+#uniName,
+#uniClassOf,
+#gschoolClassOf {
+  height: 33px;
 }
 
 #mailAddress::placeholder,
@@ -81,6 +94,7 @@
 #fNameKana::placeholder,
 #lNameKana::placeholder {
   font-size: 15px;
+  color: gray;
 }
 
 /* Submit (lower)----------------------- */
@@ -93,7 +107,7 @@
 }
 
 .agreement {
-  width: 50%;
+  width: 70%;
 }
 
 .agreement-check {
@@ -109,7 +123,6 @@
   width: 50px;
   height: 25px;
   border-radius: 25px;
-  box-sizing: content-box;
   background-color: #ff8d8d33;
   cursor: pointer;
   transition: background-color .4s;
