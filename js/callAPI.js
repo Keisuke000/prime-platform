@@ -3,8 +3,8 @@ var callAPI = (mailAddress, fName, fNameKana, lName, lNameKana, birthDate)=>{
   var myHeaders = new Headers();
   // add content type header to object
   myHeaders.append("Content-Type", "application/json");
-  // using built in JSON utility package turn object to string and store in a variable
-s
+  // using built in JSON utility package turn object to string and store in a variables
+  
   var raw = JSON.stringify({
     "mailAddress": mailAddress, 
     "fName":fName, 

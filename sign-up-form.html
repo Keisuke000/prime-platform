@@ -38,7 +38,7 @@
               <div class="mail-address">
                 <div class="category-column">＊メールアドレス</div>
                 <div class="input-column">
-                  <input type="text"  placeholder="@以降も記入して下さい。" id="mailAddress">
+                  <input type="text"  placeholder="@以降も記入" id="mailAddress">
                 </div>
               </div>
               <div class="name">
@@ -58,7 +58,7 @@
               <div class="birth-date">
                 <div class="category-column">＊生年月日</div>
                 <div class="input-column">
-                  <input type="date" value="yyyy-mm-dd" id="birthDate">
+                  <input type="date" value="2000-01-01"" id="birthDate">
                 </div>
               </div>
             </div>
@@ -67,19 +67,17 @@
               <div class="uni-name">
                 <div class="category-column">大学名</div>
                 <div class="input-column">
-                  <select  id="uniName" required>
-                    <option value="">▼ 選択してください</option>
-                    <option>選択肢のサンプル1</option>
-                    <option>選択肢のサンプル2</option>
-                    <option>選択肢のサンプル3</option>
-                  </select>
+                  <input type="text" list="example-uni" id="uniName" placeholder="大学名がない場合は「その他」">
+                  <datalist id="example-uni">
+                    <!-- ここに挿入したい -->
+                  </datalist>
                 </div>
               </div>
               <div class="uni-class-of">
                 <div class="category-column">卒業年(大学)</div>
                 <div class="input-column">
                   <select  id="uniClassOf" required>
-                    <option value="">▼ 選択してください</option>
+                    <option value="">▼ 選択</option>
                     <option>1997</option>
                     <option>1996</option>
                     <option>1995</option>
@@ -91,19 +89,19 @@
               <div class="gschool-name">
                 <div class="category-column">大学院名</div>
                 <div class="input-column">
-                  <select  id="gschoolClassOf" required>
-                    <option value="">▼ 選択してください</option>
-                    <option>なし</option>
-                    <option>選択肢のサンプル2</option>
-                    <option>選択肢のサンプル3</option>
-                  </select>
+                  <input type="text" list="example-gschool" id="gschoolName" placeholder="大学院名を検索">
+                  <datalist id="example-gschool">
+                    <option value="サンプル1"></option>
+                    <option value="サンプル2"></option>
+                    <option value="サンプル3"></option>
+                  </datalist>
                 </div>
               </div>
               <div class="gschool-class-of">
                 <div class="category-column">卒業年(大学院)</div>
                 <div class="input-column">
                   <select  id="gschoolClassOf" required>
-                    <option value="">▼ 選択してください</option>
+                    <option value="">▼ 選択</option>
                     <option>1997</option>
                     <option>1996</option>
                     <option>1995</option>
@@ -114,7 +112,6 @@
           </div>
         </form>
       </div>
-
       <div class="su-submit">
         <div class="agreement">
           <div class="agreement-check">
@@ -139,14 +136,17 @@
         </a>
       </div>
     </div>
-
   </main>
+
   <div class=" wrapper">
     <footer class="footer">
       <p>All rights reserved by Prime. N Salon</p>
     </footer>
   </div>
+
   <script src="js/callAPI.js"></script>
+  <script src="js/makeOptions.js"></script>
+
 </body>
 
 </html>
