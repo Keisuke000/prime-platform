@@ -6,6 +6,7 @@
   <link rel="shortcut icon" href="logos/title-logo.png">
   <meta data-n-head="ssr" name="viewport"
     content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
+  <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -110,28 +111,28 @@
               </div>
             </div>
           </div>
+          <div class="su-submit">
+            <div class="agreement">
+              <div class="agreement-check">
+                <label class="toggle-button-001">
+                  <input type="checkbox"/>
+                </label>
+                <a href="">会員規約</a>に同意する
+              </div>
+              <div class="agreement-check">
+                <label class="toggle-button-001">
+                  <input type="checkbox"/>
+                </label>
+                <a href="">プライバシーポリシー</a>に同意する
+              </div>
+            </div>
+            <!-- set button onClick method to call function we defined passing input values as parameters -->
+            <button type="button" class="su-btn" onclick="callAPI(document.getElementById('mailAddress').value, document.getElementById('fName').value, document.getElementById('fNameKana').value, document.getElementById('lName').value, document.getElementById('lNameKana').value, document.getElementById('birthDate').value)">送信する</button>
+          </div>
         </form>
       </div>
-      <div class="su-submit">
-        <div class="agreement">
-          <div class="agreement-check">
-            <label class="toggle-button-001">
-              <input type="checkbox"/>
-            </label>
-            <a href="">会員規約</a>に同意する
-          </div>
-          <div class="agreement-check">
-            <label class="toggle-button-001">
-              <input type="checkbox"/>
-            </label>
-            <a href="">プライバシーポリシー</a>に同意する
-          </div>
-        </div>
-        <!-- set button onClick method to call function we defined passing input values as parameters -->
-        <button type="button" class="su-btn" onclick="callAPI(document.getElementById('mailAddress').value, document.getElementById('fName').value, document.getElementById('fNameKana').value, document.getElementById('lName').value, document.getElementById('lNameKana').value, document.getElementById('birthDate').value)">送信する</button>
-      </div>
       <div class="login">
-        <a href="https://www.google.co.jp/" target="_blank">
+        <a href="https://dev.d3fym75a3w6md5.amplifyapp.com/home.html" target="_self">
           すでにアカウントを持っている場合はこちら &gt;
         </a>
       </div>
