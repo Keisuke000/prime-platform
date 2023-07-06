@@ -39,7 +39,7 @@ var callAPI = (mailAddress, fName, fNameKana, lName, lNameKana, birthDate)=>{
   .then(result => alert(JSON.parse(result).body))
   .catch(error => console.log('error', error));
   
-  window.location.href = 'https://dev.d3fym75a3w6md5.amplifyapp.com/registered.html'
+  window.location.href = 'member_registered.html'
 
 }
 

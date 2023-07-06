@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>新規登録ページ</title>
+  <title>index page</title>
   <link rel="shortcut icon" href="logos/title-logo.png">
   <meta data-n-head="ssr" name="viewport"
     content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="styles/general.css">
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/footer.css">
-  <link rel="stylesheet" href="styles/sign-up.css">
 </head>
 
 <body>
@@ -30,113 +29,26 @@
 
   <!-- su refers sign-up -->
   <main style="padding: 70px 0px;">
-    <div class="su-form">
-      <div class="su-title">新規登録</div>
-      <div class="su-contents">
-        <form>
-          <div class="form">
-            <div class="wrapper-form">
-              <div class="mail-address">
-                <div class="category-column">＊メールアドレス</div>
-                <div class="input-column">
-                  <input type="text"  placeholder="@以降も記入" id="mailAddress">
-                </div>
-              </div>
-              <div class="name">
-                <div class="category-column">＊氏名（漢字）</div>
-                <div class="input-column">
-                  <input type="text"  placeholder="姓" id="fName">
-                  <input type="text" placeholder="名" id="lName">
-                </div>
-              </div>
-              <div class="name-kana">
-                <div class="category-column">＊ふりがな（氏名）</div>
-                <div class="input-column">
-                  <input type="text" placeholder="せい" id="fNameKana">
-                  <input type="text" placeholder="めい" id="lNameKana">
-                </div>
-              </div>
-              <div class="birth-date">
-                <div class="category-column">＊生年月日</div>
-                <div class="input-column">
-                  <input type="date" value="2000-01-01"" id="birthDate">
-                </div>
-              </div>
-            </div>
-            
-            <div class="wrapper-form">
-              <div class="uni-name">
-                <div class="category-column">大学名</div>
-                <div class="input-column">
-                  <input type="text" list="example-uni" id="uniName" placeholder="大学名がない場合は「その他」">
-                  <datalist id="example-uni">
-                    <!-- ここに挿入したい -->
-                  </datalist>
-                </div>
-              </div>
-              <div class="uni-class-of">
-                <div class="category-column">卒業年(大学)</div>
-                <div class="input-column">
-                  <select  id="uniClassOf" required>
-                    <option value="">▼ 選択</option>
-                    <option>1997</option>
-                    <option>1996</option>
-                    <option>1995</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="wrapper-form">
-              <div class="gschool-name">
-                <div class="category-column">大学院名</div>
-                <div class="input-column">
-                  <input type="text" list="example-gschool" id="gschoolName" placeholder="大学院名を検索">
-                  <datalist id="example-gschool">
-                    <option value="サンプル1"></option>
-                    <option value="サンプル2"></option>
-                    <option value="サンプル3"></option>
-                  </datalist>
-                </div>
-              </div>
-              <div class="gschool-class-of">
-                <div class="category-column">卒業年(大学院)</div>
-                <div class="input-column">
-                  <select  id="gschoolClassOf" required>
-                    <option value="">▼ 選択</option>
-                    <option>1997</option>
-                    <option>1996</option>
-                    <option>1995</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="su-submit">
-            <div class="agreement">
-              <div class="agreement-check">
-                <label class="toggle-button-001">
-                  <input type="checkbox"/>
-                </label>
-                <a href="">会員規約</a>に同意する
-              </div>
-              <div class="agreement-check">
-                <label class="toggle-button-001">
-                  <input type="checkbox"/>
-                </label>
-                <a href="">プライバシーポリシー</a>に同意する
-              </div>
-            </div>
-            <!-- set button onClick method to call function we defined passing input values as parameters -->
-            <button type="button" class="su-btn" onclick="callAPI(document.getElementById('mailAddress').value, document.getElementById('fName').value, document.getElementById('fNameKana').value, document.getElementById('lName').value, document.getElementById('lNameKana').value, document.getElementById('birthDate').value)">送信する</button>
-          </div>
-        </form>
-      </div>
-      <div class="login">
-        <a href="https://dev.d3fym75a3w6md5.amplifyapp.com/home.html" target="_self">
-          すでにアカウントを持っている場合はこちら &gt;
-        </a>
-      </div>
-    </div>
+    <br>
+    <a href="member_registration.html" target="_self">
+      新規登録画面 (member_registration.html)
+    </a>
+    <br>
+    <a href="member_registered.html" target="_self">
+      登録完了画面 (member_registered.html)
+    </a>
+    <br>
+    <a href="member_info.html" target="_self">
+      加入状況確認画面 (member_info.html)
+    </a>
+    <br>
+    <a href="home.html" target="_self">
+      顧客側ホーム確認画面 (home.html)
+    </a>
+    <br>
+    <a href="todo.html" target="_self">
+      思い入れのあるtodo画面 (todo.html)
+    </a>
   </main>
 
   <div class=" wrapper">
@@ -144,7 +56,6 @@
       <p>All rights reserved by Prime. N Salon</p>
     </footer>
   </div>
-
   <script src="js/callAPI.js"></script>
   <script src="js/makeOptions.js"></script>
 
