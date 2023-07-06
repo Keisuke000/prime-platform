@@ -16,10 +16,12 @@ function OnCognitoConfirmRegistration() {
 
 	var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
 	cognitoUser.confirmRegistration(code, true, function(err, result) {
+		console.log('call result: ' + result);
 		if (err) {
 			alert(err.message || JSON.stringify(err));
 			return;
-		}
-		console.log('call result: ' + result);
+		}else{
+            window.location.href = 'registered.html'
+        }
 	});
 }

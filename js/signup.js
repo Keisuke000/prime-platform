@@ -13,11 +13,15 @@ function OnCognitoSignUp() {
 		err,
 		result
 	) {
+        var cognitoUser = result.user;
+		console.log('user name is ' + cognitoUser.getUsername());
+        
 		if (err) {
 			alert(err.message || JSON.stringify(err));
 			return;
-		}
-		var cognitoUser = result.user;
-		console.log('user name is ' + cognitoUser.getUsername());
+		}else{
+            window.location.href = 'confirm.html'
+        }
+		
 	});
 }
