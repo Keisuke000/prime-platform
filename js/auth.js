@@ -53,6 +53,8 @@ function OnCognitoAuthenticateUser() {
 					// Instantiate aws sdk service objects now that the credentials have been updated.
 					// example: var s3 = new AWS.S3();
 					console.log('Successfully logged!');
+                    alert('Successfully logged!')
+                    window.location.href = 'home.html'
 				}
 			});
 		},
