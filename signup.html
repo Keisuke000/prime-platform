@@ -1,22 +1,80 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8"></meta>
-  <title>CognitoSignUp</title>
+  <title>新規アカウント登録</title>
+  <link rel="shortcut icon" href="logos/title-logo.png">
+  <meta data-n-head="ssr" name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/sign-up.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="left-section">
+      <a href="https://www.prime-n-salon.com/" target="_blank">
+        <img class="primen-logo" src="logos/primen-logo.webp" alt="primen-logo">
+      </a>
+    </div>
+    <div class="middle-section"></div>
+    <div class="right-section"></div>
+  </header>
+
+  <!-- su refers sign-up -->
+  <main style="padding: 70px 0px;">
+    <div class="su-form">
+      <div class="su-title">新規アカウント登録</div>
+      <div class="su-contents">
+        <form>
+          <div class="form">
+            <div class="wrapper-form">
+              <div class="mail-address">
+                <div class="category-column">メールアドレス</div>
+                <div class="input-column">
+                    <input type="text" placeholder="@以降も記入"  id="mailAddress" placeholder="Email Address">
+                </div>
+              </div>
+              <div class="name">
+                <div class="category-column">パスワード</div>
+                <div class="input-column">
+                    <input type="password" id="fName" placeholder="６字以上、英字＋数字">
+                </div>
+              </div>
+            </div>
+            <div class="su-submit">
+                <button type="button" class="su-btn" value="CognitoSignUp" onclick="OnCognitoSignUp();">送信する</button>
+            </div>
+
+        </form>
+      </div>
+      <div class="login">
+        <a href="login.html" target="_self">
+          すでにアカウントを持っている方はこちら &gt;
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <div class=" wrapper">
+    <footer class="footer">
+      <p>All rights reserved by Prime. N Salon</p>
+    </footer>
+  </div>
+
+  <script src="js/callAPI.js"></script>
+  <script src="js/aws-sdk.min.js"></script>
   <script src="js/aws-cognito-sdk.min.js"></script>
   <script src="js/amazon-cognito-identity.min.js"></script>
-  <script src="js/signup.js"></script>
-</head>
-<body>
-  <h1>ユーザー登録画面</h1>
-  <p>実際にコードが届くため、使えるメールアドレスを入力すること</p>
-  <p>パスワードは6文字以上、英字＋数字</p>
-  <span style="display: inline-block; width: 100px;">Email</span>
-  <input type="text" id="email" placeholder="Email Address">
-  <br/>
-  <span style="display: inline-block; width: 100px;">Password</span>
-  <input type="password" id="password" placeholder="Password">
-  <br/><br/>
-  <input type="button" value="CognitoSignUp" onclick="OnCognitoSignUp();">
+  <script src="js/auth.js"></script>
+
 </body>
+
 </html>

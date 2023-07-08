@@ -39,24 +39,30 @@
               <div class="mail-address">
                 <div class="category-column">メールアドレス</div>
                 <div class="input-column">
-                  <input type="text"  placeholder="@以降も記入" id="mailAddress">
+                    <input type="text" placeholder="@以降も記入"  id="mailAddress" placeholder="Email Address">
                 </div>
               </div>
               <div class="name">
                 <div class="category-column">パスワード</div>
                 <div class="input-column">
-                  <input type="text"  placeholder="入力" id="fName">
+                    <input type="password" id="fName" placeholder="入力する">
                 </div>
               </div>
             </div>
-            <button type="button" class="su-btn">送信する</button>
+            <div class="su-submit">
+                <button type="button" class="su-btn" value="CognitoAuthenticateUser" onclick="OnCognitoAuthenticateUser();">送信する</button>
             </div>
+
         </form>
       </div>
       <div class="login">
         <a href="member_info.html" target="_self">
           メールアドレス・パスワードを忘れた方はこちら &gt;
         </a>
+        <br>
+        <a href="signup.html" target="_self">
+            新規アカウント登録はこちら &gt;
+          </a>
       </div>
     </div>
   </main>
@@ -68,7 +74,10 @@
   </div>
 
   <script src="js/callAPI.js"></script>
-  <script src="js/makeOptions.js"></script>
+  <script src="js/aws-sdk.min.js"></script>
+  <script src="js/aws-cognito-sdk.min.js"></script>
+  <script src="js/amazon-cognito-identity.min.js"></script>
+  <script src="js/auth.js"></script>
 
 </body>
 
