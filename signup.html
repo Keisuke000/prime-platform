@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"></meta>
+  <title>CognitoSignUp</title>
+  <script src="js/aws-cognito-sdk.min.js"></script>
+  <script src="js/amazon-cognito-identity.min.js"></script>
+  <script src="js/signup.js"></script>
+</head>
+<body>
+  <h1>ユーザー登録画面</h1>
+  <p>実際にコードが届くため、使えるメールアドレスを入力すること</p>
+  <p>パスワードは6文字以上、英字＋数字</p>
+  <span style="display: inline-block; width: 100px;">Email</span>
+  <input type="text" id="email" placeholder="Email Address">
+  <br/>
+  <span style="display: inline-block; width: 100px;">Password</span>
+  <input type="password" id="password" placeholder="Password">
+  <br/><br/>
+  <input type="button" value="CognitoSignUp" onclick="OnCognitoSignUp();">
+</body>
+</html>
