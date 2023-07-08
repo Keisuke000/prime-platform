@@ -67,7 +67,9 @@
 #lName,
 #fNameKana,
 #lNameKana,
-#mailAddress,
+#email,
+#password,
+#ConfirmCode,
 #birthDate,
 #uniName,
 #uniClassOf,
@@ -90,7 +92,7 @@
   font-size: 15px;
 }
 
-#mailAddress::placeholder,
+#email::placeholder,
 #fName::placeholder,
 #lName::placeholder,
 #fNameKana::placeholder,
