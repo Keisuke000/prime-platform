@@ -39,7 +39,7 @@ var callAPI = (mailAddress, fName, fNameKana, lName, lNameKana, birthDate)=>{
   .then(result => alert(JSON.parse(result).body))
   .catch(error => console.log('error', error));
   
-  window.location.href = 'member_registered.html'
+  window.location.href = 'registered.html'
 
 }
 
@@ -66,7 +66,4 @@ var callgoHomeAPI = () => {
 
   // 生成したHTMLを入れておく変数
   let html = '';
-
-
-
 }
