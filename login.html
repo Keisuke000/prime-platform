@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>新規アカウント登録</title>
+  <title>ログイン</title>
   <link rel="shortcut icon" href="logos/title-logo.png">
   <meta data-n-head="ssr" name="viewport"
     content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no">
@@ -31,7 +31,7 @@
   <!-- su refers sign-up -->
   <main style="padding: 70px 0px;">
     <div class="su-form">
-      <div class="su-title">新規アカウント登録</div>
+      <div class="su-title">ログイン</div>
       <div class="su-contents">
         <form>
           <div class="form">
@@ -45,20 +45,24 @@
               <div class="name">
                 <div class="category-column">パスワード</div>
                 <div class="input-column">
-                    <input type="password" id="password" placeholder="６字以上、英字＋数字">
+                    <input type="password" id="password" placeholder="入力する">
                 </div>
               </div>
             </div>
             <div class="su-submit">
-                <button type="button" class="su-btn" value="CognitoSignUp" onclick="OnCognitoSignUp();">送信する</button>
+                <button type="button" class="su-btn" value="CognitoAuthenticateUser" onclick="OnCognitoAuthenticateUser();">送信する</button>
             </div>
 
         </form>
       </div>
       <div class="login">
-        <a href="login.html" target="_self">
-          すでにアカウントを持っている方はこちら &gt;
+        <a href="member_info.html" target="_self">
+          メールアドレス・パスワードを忘れた方はこちら &gt;
         </a>
+        <br>
+        <a href="signup.html" target="_self">
+            新規アカウント登録はこちら &gt;
+          </a>
       </div>
     </div>
   </main>
@@ -74,7 +78,6 @@
   <script src="js/aws-cognito-sdk.min.js"></script>
   <script src="js/amazon-cognito-identity.min.js"></script>
   <script src="js/auth.js"></script>
-  <script src="js/signup.js"></script>
 
 </body>
 
