@@ -39,14 +39,10 @@
               <div class="mail-address">
                 <div class="category-column">メールアドレス</div>
                 <div class="input-column">
-                    <script>var email_from_session = sessionStorage.getItem('email');</script>
                     <input id="email" type="text" value="" placeholder="@以降も記入" placeholder="Email Address">
                     <script>
-                      console.log( document.getElementById( "email" ).value );
                       var email_from_session = sessionStorage.getItem('email');
-                      console.log( email_from_session );
                       document.getElementById( "email" ).value = email_from_session ;
-                      console.log( document.getElementById( "email" ).value );
                     </script>
                 </div>
               </div>
