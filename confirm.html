@@ -39,7 +39,11 @@
               <div class="mail-address">
                 <div class="category-column">メールアドレス</div>
                 <div class="input-column">
-                    <input type="text" placeholder="@以降も記入"  id="email" placeholder="Email Address">
+                    <input id="email" type="text" value="" placeholder="@以降も記入" placeholder="Email Address">
+                    <script>
+                      var email_from_session = sessionStorage.getItem('email');
+                      document.getElementById( "email" ).value = email_from_session ;
+                    </script>
                 </div>
               </div>
               <div class="name">
