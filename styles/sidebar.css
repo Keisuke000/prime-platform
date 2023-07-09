@@ -70,25 +70,13 @@
   font-family: Arial;
 }
 
-.announce-icon,
-.step-icon,
-.results-icon,
-.karte-icon,
-.memberships-icon,
-.accounting-icon,
-.todo-icon {
+.sidebar-icon {
   width: 30px;
   height: 30px;
   padding: 0px 10px;
 }
 
-.announce-description,
-.step-description,
-.results-description,
-.karte-description,
-.memberships-description,
-.accounting-description,
-.todo-description {
+.sidebar-description {
   color: rgb(87, 87, 87)
 }
 
@@ -139,29 +127,17 @@
   margin: 10px 0px;
 }
 
-.slack-btn,
-.instagram-btn ,
-.twitter-btn,
-.youtube-btn,
-.tiktok-btn {
+.sns-btn {
   transition: 0.15s;
 }
 
-.slack-icon,
-.instagram-icon,
-.twitter-icon,
-.youtube-icon,
-.tiktok-icon {
+.sns-icon {
   width: 30px;
   height: 30px;
   padding: 2px;
 }
 
-.slack-btn .tooltip,
-.instagram-btn .tooltip,
-.twitter-btn .tooltip,
-.youtube-btn .tooltip,
-.tiktok-btn .tooltip {
+.sns-btn .tooltip {
   position: absolute;
   background-color: rgb(189, 189, 189);
   padding: 4px 8px;
@@ -174,10 +150,6 @@
   white-space: nowrap;
 }
 
-.slack-btn:hover .tooltip,
-.instagram-btn:hover .tooltip,
-.twitter-btn:hover .tooltip,
-.youtube-btn:hover .tooltip,
-.tiktok-btn:hover .tooltip {
+.sns-btn:hover .tooltip {
   opacity: 1;
 }

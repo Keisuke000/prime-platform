@@ -45,67 +45,67 @@
     <div class="sidebar">
       <div class="upper-section">
         <a href="https://www.google.co.jp/" class="sidebar-link">
-          <img class="announce-icon" src="icons/announce.png">
+          <img class="sidebar-icon" src="icons/announce.png">
           <div class="announce-count">3</div>
-          <p class="announce-description">掲示板</p>
+          <p class="sidebar-description">掲示板</p>
         </a>
         <a href="https://www.google.co.jp/" class="sidebar-link">
-          <img class="results-icon" src="icons/results.png">
-          <p class="results-description">全体結果</p>
+          <img class="sidebar-icon" src="icons/results.png">
+          <p class="sidebar-description">全体結果</p>
         </a>
         <a href="https://www.google.co.jp/" class="sidebar-link">
-          <img class="karte-icon" src="icons/karte.png">
-          <p class="karte-description">個別情報</p>
+          <img class="sidebar-icon" src="icons/karte.png">
+          <p class="sidebar-description">個別情報</p>
         </a>
         <a href="https://www.google.co.jp/" class="sidebar-link">
-          <img class="memberships-icon" src="icons/memberships.png">
-          <p class="memberships-description">加入状況</p>
+          <img class="sidebar-icon" src="icons/memberships.png">
+          <p class="sidebar-description">加入状況</p>
         </a>
         <a href="https://www.google.co.jp/" class="sidebar-link">
-          <img class="accounting-icon" src="icons/accounting.png">
-          <p class="accounting-description">給与</p>
+          <img class="sidebar-icon" src="icons/accounting.png">
+          <p class="sidebar-description">給与</p>
         </a>
       </div>
       <div class="lower-section">
         <div class="sidebar-link">
-          <img class="setting-icon" src="icons/setting.png">
-          <p class="setting-description">設定</p>
+          <img class="sidebar-icon" src="icons/setting.png">
+          <p class="sidebar-description">設定</p>
         </div>
         <div class="sidebar-link">
-          <img class="logout-icon" src="icons/logout.png">
-          <p class="logout-description">ログアウト</p>
+          <img class="sidebar-icon" src="icons/logout.png">
+          <p class="sidebar-description">ログアウト</p>
         </div>
         <button onclick="location.href='member_registration.html'" class="registration-btn">
           新規登録はこちら
         </button>
         <div class="sns-btns">
-          <div class="slack-btn">
+          <div class="sns-btn">
             <a href="" target="_blank">
-              <img class="slack-icon" src="icons/slack.png">
+              <img class="sns-icon" src="icons/slack.png">
             </a>
             <div class="tooltip">Slackに参加</div>
           </div>
-          <div class="instagram-btn">
+          <div class="sns-btn">
             <a href="https://www.instagram.com/prime.n_salon/" target="_blank">
-              <img class="instagram-icon" src="icons/instagram.png">
+              <img class="sns-icon" src="icons/instagram.png">
             </a>
             <div class="tooltip">Instagram</div>
           </div>
-          <div class="twitter-btn">
+          <div class="sns-btn">
             <a href="https://twitter.com/nsyuukatu" target="_blank">
-              <img class="twitter-icon" src="icons/twitter.png">
+              <img class="sns-icon" src="icons/twitter.png">
             </a>
             <div class="tooltip">Twitter</div>
           </div>
-          <div class="youtube-btn">
+          <div class="sns-btn">
             <a href="https://www.youtube.com/@prime.nsalon6667" target="_blank">
-              <img class="youtube-icon" src="icons/youtube.png">
+              <img class="sns-icon" src="icons/youtube.png">
             </a>
             <div class="tooltip">Youtube</div>
           </div>
-          <div class="tiktok-btn">
+          <div class="sns-btn">
             <a href="https://www.tiktok.com/@prime.nsalon" target="_blank">
-              <img class="tiktok-icon" src="icons/tik-tok.png">
+              <img class="sns-icon" src="icons/tik-tok.png">
             </a>
             <div class="tooltip">Tiktok</div>
           </div>
@@ -113,6 +113,7 @@
       </div>
     </div>
   </nav>
+  <div id="#mask"></div>
 
   <footer class="footer">
     <p>All rights reserved by Prime. N Salon</p>
@@ -135,47 +136,11 @@
         </thead>
         <tbody id="memberList"></tbody>
       </table>
-      
-      <script>
-        const memberList = document.getElementById("memberList");
-        
-        // jsonファイルから情報を取得
-        async function getMembers() {  
-          const response = await fetch(
-            "https://bfhzgwe0n8.execute-api.ap-northeast-1.amazonaws.com/dev/home"
-          );
-          const members = await response.json();
-          return members;
-        }
-        
-        //  リストアップするmember
-        async function listMembers(){
-          const members = await getMembers();
-          members.forEach(addList);
-          // for (const mb in members){
-          //   addList(mb)
-          // }
-        }
-        
-        // リストに追加
-        function addList(member){
-          const tr = document.createElement("tr");
-          memberList.appendChild(tr);
-          const objArray = Object.entries(member);
-          objArray.forEach((key) => {
-            const td = document.createElement("td");
-            td.textContent = key[1];
-            tr.appendChild(td);
-          });
-        }
-        
-        window.addEventListener("load", listMembers);
-      </script>
     </div>
-    
   </main>
 
   <script src="js/hamburger-menu.js"></script>
+  <script src="js/make-member-table.js"></script>
 </body>
 
 </html>
