@@ -43,6 +43,8 @@ var callAPI = (mailAddress, fName, fNameKana, lName, lNameKana, birthDate)=>{
 
 }
 
+
+//使ってないかも
 var callgoHomeAPI = () => {
   // instantiate a headers object
   var myHeaders = new Headers();
