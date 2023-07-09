@@ -6,20 +6,21 @@ function OnCognitoSignUp() {
 	};
 	var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 
-	var username = document.getElementById("email").value;
+	var email = document.getElementById("email").value;
 	var password = document.getElementById("password").value;
 
-	userPool.signUp(username, password, null, null, function(
+	userPool.signUp(email, password, null, null, function(
 		err,
 		result
 	) {
         var cognitoUser = result.user;
-		console.log('user name is ' + cognitoUser.getUsername());
+		console.log('mailadress is ' + cognitoUser.getUsername());
         
 		if (err) {
 			alert(err.message || JSON.stringify(err));
 			return;
 		}else{
+			sessionStorage.setItem('email',email);
             window.location.href = 'confirm.html'
         }
 		

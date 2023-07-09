@@ -39,7 +39,8 @@
               <div class="mail-address">
                 <div class="category-column">メールアドレス</div>
                 <div class="input-column">
-                    <input type="text" placeholder="@以降も記入"  id="email" placeholder="Email Address">
+                    var email_from_session = sessionStorage.getItem('name');
+                    <input type="text" value=email_from_session placeholder="@以降も記入"  id="email" placeholder="Email Address">
                 </div>
               </div>
               <div class="name">
