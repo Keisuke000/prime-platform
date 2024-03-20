@@ -1,8 +1,8 @@
 function OnCognitoConfirmRegistration() {
 
 	var poolData = {
-		UserPoolId: 'ap-northeast-1_kKR33X2Ly', // Your user pool id here
-		ClientId: '798ncmmova3vp8s34me3v07qnh', // Your client id here
+		UserPoolId: 'ap-northeast-1_DAp8YmJLB', // Your user pool id here
+		ClientId: '6ojrrug3p4qdoqsllefll80bv9', // Your client id here
 	};
 	var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 

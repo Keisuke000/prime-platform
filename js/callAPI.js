@@ -34,7 +34,7 @@ var callAPI = (mailAddress, fName, fNameKana, lName, lNameKana, birthDate)=>{
       redirect: 'follow'
   };
   // make API call with parameters and use promises to get response
-  fetch("https://bfhzgwe0n8.execute-api.ap-northeast-1.amazonaws.com/dev/memberRegister", requestOptions)
+  fetch("https://lsi7msl253.execute-api.ap-northeast-1.amazonaws.com/PDB_API01/memberRegister", requestOptions)
   .then(response => response.text())
   .then(result => alert(JSON.parse(result).body))
   .catch(error => console.log('error', error));
@@ -59,7 +59,7 @@ var callgoHomeAPI = () => {
   };
 
   // make API call with parameters and use promises to get response
-  fetch("https://bfhzgwe0n8.execute-api.ap-northeast-1.amazonaws.com/dev/home", requestOptions)
+  fetch("https://lsi7msl253.execute-api.ap-northeast-1.amazonaws.com/PDB_API01/home", requestOptions)
   // .then(response => response.text())
   .then(JSON => jsonResponse)
 
